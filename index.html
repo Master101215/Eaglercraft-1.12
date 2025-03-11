@@ -1,11 +1,21 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <button name="Launch Offline" onClick="redirectjs()">    
-        <script type="text/javascript">
-        function redirectjs()
-        {
-        var url = "http://www.master101215.github.io/Eaglercraft-1.12/js";
-        window.location(url);
+    <script type="text/javascript">
+        function redirectjs() {
+            var url = "https://master101215.github.io/Eaglercraft-1.12/js/offline.html";
+            window.location.href = url;
         }
-        </script>
+    </script>
+    <script type="text/javascript">
+        function redirectwasm() {
+            var url= "https://master101215.github.io/Eaglercraft-1.12/wasm/wasm.html"
+            window.location.href = url;
+        }
+    </script>
 </head>
+<body>
+    <button name="Launch Offline" onClick="redirectjs()">Launch Offline</button>
+    <button name="Launch WASM" onClick="redirectwasm()">Launch WASM</button>
+</body>
+</html>
