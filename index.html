@@ -1,27 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eaglercraft 1.12 Launcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #f39c12;
+            margin-top: 10px;
+        }
+
+        footer {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
     <script type="text/javascript">
         function redirectjs() {
             var url = "https://master101215.github.io/Eaglercraft-1.12/js/offline.html";
             window.location.href = url;
         }
-    </script>
-    <script type="text/javascript">
+
         function redirectwasm() {
-            var url= "https://master101215.github.io/Eaglercraft-1.12/wasm/wasm.html"
+            var url= "https://master101215.github.io/Eaglercraft-1.12/wasm/wasm.html";
             window.location.href = url;
         }
     </script>
 </head>
 <body>
-    <h1>Eaglercraft 1.12: Hosted by _QuestionMark_</h1>
-    <p>Click the button named "Launch Normal" to launch the normal version.</p>
-    <p>Click the button named "Launch WASM" to launch the webassembly version, is faster, but requres JSPI, enable it in chrome://flags</p>
-    <button name="Launch Normal" onClick="redirectjs()">Launch Offline</button>
-    <button name="Launch WASM" onClick="redirectwasm()">Launch WASM</button>
-    <p>Note: WASM requires JSPI to be enabled in chrome://flags</p>
-    <p>All credit to creators of Eaglercraft 1.12</p>
+    <div class="container">
+        <h1>Eaglercraft 1.12: Hosted by _QuestionMark_</h1>
+        <p>Click the button named "Launch Normal" to launch the normal version.</p>
+        <p>Click the button named "Launch WASM" to launch the webassembly version. It is faster, but requires JSPI, enable it in <strong>chrome://flags</strong></p>
+        <button name="Launch Normal" onClick="redirectjs()">Launch Offline</button>
+        <button name="Launch WASM" onClick="redirectwasm()">Launch WASM</button>
+        <p class="note">Note: WASM requires JSPI to be enabled in chrome://flags</p>
+        <footer>All credit to creators of Eaglercraft 1.12</footer>
+    </div>
 </body>
 </html>
